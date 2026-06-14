@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Pasteles de la Abuela</title>
+    <style>
+        /* ESTILO PARA EL FONDO */
+        body {
+            font-family: 'Arial', sans-serif;
+            /* Cambia 'fondo.jpg' por el nombre de tu imagen */
+            background-image: url('fondo.jpg');
+            background-size: cover; /* Para que cubra toda la pantalla */
+            background-attachment: fixed; /* Para que no se mueva al hacer scroll */
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #4a2c2a;
+        }
+
+        /* ESTILO PARA EL LOGO */
+        .logo-container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+        }
+
+        .logo-container img {
+            max-width: 250px;
+            height: auto;
+        }
+
+        header {
+            background-color: #c97a9a;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 5px solid #a05a78;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Barra de botones */
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 20px;
+            background-color: rgba(248, 232, 240, 0.9);
+        }
+
+        .nav-buttons button {
+            background-color: #b96888;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #984c6c;
+            transform: scale(1.05);
+        }
+
+        /* Contenido de las secciones */
+        .content-section {
+            display: none;
+            padding: 25px 35px;
+            margin: 20px auto;
+            max-width: 750px;
+            background-color: rgba(255, 255, 255, 0.95); /* Blanco semi-transparente */
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-top: 4px solid #c97a9a;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #b96888;
+            font-size: 22px;
+            border-bottom: 2px dotted #e0b8cc;
+            padding-bottom: 8px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .contact-info {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #c97a9a;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- AQUÍ ESTÁ EL LOGO -->
+    <div class="logo-container"> 
+    </div>
+
+    <header>
+        <h1>🍰 LOS PASTELES DE LA ABUELA 🍰</h1>
+    </header>
+
+    <!-- Botones de Navegación -->
+    <div class="nav-buttons">
+        <button onclick="showSection('servicio')">SERVICIO</button>
+        <button onclick="showSection('competencia')">COMPETENCIA</button>
+        <button onclick="showSection('beneficios')">BENEFICIO DE COMPRA</button>
+        <button onclick="showSection('crecimiento')">CRECIMIENTO ESPERADO</button>
+        <button onclick="showSection('presupuesto')">PRESUPUESTO</button>
+        <button onclick="showSection('publico')">PÚBLICO OBJETIVO</button>
+        <button onclick="showSection('beneficio-compra')">BENEFICIO DE LA COMPRA</button>
+        <button onclick="showSection('mision')">MISIÓN Y VISIÓN</button>
+        <button onclick="showSection('contacto')">CONTÁCTANOS</button>
+    </div>
+
+    <!-- SECCIÓN 1: SERVICIO -->
+    <div id="servicio" class="content-section">
+        <h2>✦ SERVICIO</h2>
+        <p>Producción de pasteles (tres leches, queso, chocolate) también rellenos de flan, chocolate, coco, etc. Contamos con servicio de apartado.</p>
+    </div>
+
+    <!-- SECCIÓN 2: COMPETENCIA -->
+    <div id="competencia" class="content-section">
+        <h2>✦ COMPETENCIA</h2>
+        <p>Principalmente es la pastelería lulu, pasteleria mexico, pasteleria grissel.</p>
+    </div>
+
+    <!-- SECCIÓN 3: BENEFICIO DE COMPRA -->
+    <div id="beneficios" class="content-section">
+        <h2>✦ BENEFICIO DE COMPRA</h2>
+        <ul>
+            <li>Calidad</li>
+            <li>Sabor</li>
+            <li>Precio accesible</li>
+            <li>Buena atención al cliente</li>
+        </ul>
+    </div>
+
+    <!-- SECCIÓN 4: CRECIMIENTO ESPERADO -->
+    <div id="crecimiento" class="content-section">
+        <h2>✦ CRECIMIENTO ESPERADO</h2>
+        <p>Será que el negocio tenga un crecimiento del 20% en un periodo de dos años aumentando el numero de clientes.</p>
+    </div>
+
+    <!-- SECCIÓN 5: PRESUPUESTO -->
+    <div id="presupuesto" class="content-section">
+        <h2>✦ PRESUPUESTO</h2>
+        <p>El presupuesto de la campaña es de $1500.</p>
+    </div>
+
+    <!-- SECCIÓN 6: PÚBLICO OBJETIVO -->
+    <div id="publico" class="content-section">
+        <h2>✦ PÚBLICO OBJETIVO</h2>
+        <p>Para personas que necesitan un pastel de diferentes tematicas y estilos. Clientes que buscan calidad y un sabor inigualable en sus pasteles.</p>
+    </div>
+
+    <!-- SECCIÓN 7: BENEFICIO DE LA COMPRA -->
+    <div id="beneficio-compra" class="content-section">
+        <h2>✦ BENEFICIO DE LA COMPRA</h2>
+        <p>Calidad, frescura, personalización y exelente atencion al cliente.</p>
+        <p>Responsabilidad y compromiso al entregar el pastel.</p>
+    </div>
+
+    <!-- SECCIÓN 8: MISIÓN Y VISIÓN -->
+    <div id="mision" class="content-section">
+        <h2>✦ MISIÓN Y VISIÓN</h2>
+        <p>Brindar un servicio bien hecho y con la mejor calidad en los pasteles y que somos una pastelería con mucho sentido de responsabilidad y compromiso.</p>
+    </div>
+
+    <!-- SECCIÓN 9: CONTÁCTANOS -->
+    <div id="contacto" class="content-section">
+        <h2>✦ CONTÁCTANOS</h2>
+        <div class="contact-info">
+            <p>📞 288 115 60 58</p>
+            <p>👤 martacarmonacarillo</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Los Pasteles de la Abuela © 2025</p>
+    </footer>
+
+    <script>
+        // Función para mostrar y ocultar secciones
+        function showSection(sectionId) {
+            // Oculta todas las secciones
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Muestra la sección seleccionada
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Muestra la primera sección al cargar
+        window.onload = function() {
+            showSection('servicio');
+        };
+    </script>
+
+</body>
+</html>
